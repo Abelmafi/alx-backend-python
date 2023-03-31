@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-'''Task 7: Complex types - string and int/float to tuple
+''' Complex types - functions
 '''
-from typing import Union, Tuple
+from typing import Callable
 
 
-def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
-    '''Converts a key and its value to a tuple of the key and
-    the square of its value.
+def make_multiplier(multiplier: float) -> Callable[[float], float]:
+    '''Creates a multiplier function.
     '''
-    return (k, float(v**2))
+    return lambda x: x * multiplier
